@@ -1,40 +1,29 @@
-# Slint Rust Template
+# Rust text editor
 
-A template for a Rust application that's using [Slint](https://slint.rs) for the user interface.
+I made this project with no keyboard so consider subscribing to my [youtube](https://www.youtube.com/@devnitrate)
 
-## About
+## Installation
 
-This template helps you get started developing a Rust application with Slint as toolkit
-for the user interface. It demonstrates the integration between the `.slint` UI markup and
-Rust code, how to trigger react to callbacks, get and set properties and use basic widgets.
+1. Clone this project
+   ```
+   git clone https://github.com/DevNitrate/RustTxt
+   ```
+2. Build project
+   ```
+   cargo build --release
+   ```
+3. Move the *./target/release/text-editor* to where you desire and you can rename it to whatever you want
 
 ## Usage
 
-1. Install Rust by following the [Rust Getting Started Guide](https://www.rust-lang.org/learn/get-started).
-   Once this is done, you should have the ```rustc``` compiler and the ```cargo``` build system installed in your path.
-2. Install [`cargo-generate`](https://github.com/cargo-generate/cargo-generate)
-    ```
-    cargo install cargo-generate
-    ```
-3. Set up a sample project with this template
-    ```
-    cargo generate --git https://github.com/slint-ui/slint-rust-template --name my-project
-    cd my-project
-    ```
-3. Build with cargo
-    ```
-    cargo build
-    ```
-4. Run the application binary
-     ```
-     cargo run
-     ```
+**Note that it only works for files in the same directory as the app .exe file unless you use _./_ and/or _../_**
 
-We recommend using an IDE for development, along with our [LSP-based IDE integration for `.slint` files](https://github.com/slint-ui/slint/blob/master/tools/lsp/README.md). You can also load this project directly in [Visual Studio Code](https://code.visualstudio.com) and install our [Slint extension](https://marketplace.visualstudio.com/items?itemName=Slint.slint).
+Open the *.exe* file and write some text or load a file by putting the file name in the input at the left of the load button which you will then press (at this point if the file was valid it should have created it otherwise it will close the app) and then when you want to save the file put the file name to save in the input at the left of the save button which you will then press (if file name is empty it will not crash but it won't save the file).
 
-## Next Steps
+## I am encountering problems
 
-We hope that this template helps you get started and you enjoy exploring making user interfaces with Slint. To learn more
-about the Slint APIs and the `.slint` markup language check out our [online documentation](https://slint.dev/docs).
+If you are encuontering problems open an issue.
 
-Don't forget to edit this README to replace it by yours
+## Can i contribute
+
+Yes of course.
