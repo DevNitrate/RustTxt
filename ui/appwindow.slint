@@ -1,0 +1,47 @@
+import { Button, VerticalBox, GridBox, TextEdit, LineEdit, HorizontalBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    background: #313e50;
+
+    in property <string> data;
+
+    callback save(string, string);
+    callback load(string);
+
+    GridBox {
+        HorizontalBox {
+            file := LineEdit {
+                width: 80px;
+                height: 35px;
+                placeholder-text: "file name";
+            }
+            Button {
+                width: 120px;
+                height: 35px;
+                text: "Save";
+                primary: true;
+                clicked => {save(content.text, file.text)}
+            }
+            loadFile := LineEdit {
+                width: 80px;
+                height: 35px;
+                placeholder-text: "file name";
+            }
+            Button {
+                width: 120px;
+                height: 35px;
+                text: "Load";
+                primary: true;
+                clicked => {load(loadFile.text)}
+            }
+        }
+        Row {
+            content := TextEdit {
+                text: root.data;
+                width: 900px;
+                height: 500px;
+                font-size: 14px;
+            }
+        }
+    }
+}
